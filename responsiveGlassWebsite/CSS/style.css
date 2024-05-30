@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(#111, #222);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: red;
+  position: absolute;
+  z-index: -1;
+  clip-path: circle(40% at right 70%);
+}
+
+.container {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+nav .logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  flex: 3;
+}
+
+nav ul {
+  flex: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 15px;
+  font-weight: 500;
+  transition: color 0.5s ease;
+}
+
+nav ul li a:hover {
+  color: #a80202;
+}
+
+.contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+}
+
+.contents .text {
+  color: #fff;
+  width: 40%;
+}
+
+.contents .text h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.contents .text p {
+  font-size: 18px;
+  line-height: 25px;
+  margin: 10px 0;
+  letter-spacing: 1px;
+}
+
+.contents .img {
+  width: 40%;
+  overflow: hidden;
+}
+
+.contents .img img {
+  width: 400px;
+}
+
+@media (min-width: 950px) and (max-width: 1500px) {
+  .contents .img img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 950px) {
+  .contents,
+  nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contents .img,
+  .contents .text {
+    width: 100%;
+  }
+
+  body::after {
+    clip-path: circle(50% at bottom);
+  }
+}
