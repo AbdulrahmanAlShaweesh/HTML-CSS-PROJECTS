@@ -48,12 +48,83 @@
             />
             <input type="text" placeholder="Search" />
           </div>
-          <div class="nav-user-icons online">
+          <div
+            class="nav-user-icons online"
+            id="online"
+            onclick="settingsMenuToggle()"
+          >
             <img
               src="./assets/profile-pic.png"
               alt="profile pic"
               draggable="false"
             />
+          </div>
+        </div>
+        <div class="setting-dropdown-menu">
+          <div id="dark-btn" class="dark-btn-on">
+            <span> </span>
+          </div>
+          <div class="dropdown-container">
+            <div class="user-profile">
+              <img src="./assets/profile-pic.png" alt="" />
+              <div>
+                <p>john nicholson</p>
+                <a href="#"> see your profile</a>
+              </div>
+            </div>
+            <hr />
+            <div class="user-profile">
+              <img src="./assets/feedback.png" alt="" />
+              <div>
+                <p>Give feedback</p>
+                <a href="#">help us to improve the new design</a>
+              </div>
+            </div>
+            <hr />
+            <div class="setting-links">
+              <img
+                src="./assets/setting.png"
+                alt="settings icon"
+                class="settings-icon"
+              />
+              <a href="#"
+                >Settings and privcy
+                <span><img src="./assets/arrow.png" alt="arrow" /></span>
+              </a>
+            </div>
+            <div class="setting-links">
+              <img
+                src="./assets/help.png"
+                alt="settings icon"
+                class="settings-icon"
+              />
+              <a href="#"
+                >help and support
+                <span><img src="./assets/arrow.png" alt="arrow" /></span>
+              </a>
+            </div>
+            <div class="setting-links">
+              <img
+                src="./assets/display.png"
+                alt="settings icon"
+                class="settings-icon"
+              />
+              <a href="#"
+                >display and accessbility
+                <span><img src="./assets/arrow.png" alt="arrow" /></span>
+              </a>
+            </div>
+            <div class="setting-links">
+              <img
+                src="./assets/logout.png"
+                alt="settings icon"
+                class="settings-icon"
+              />
+              <a href="#"
+                >logout
+                <span><img src="./assets/arrow.png" alt="arrow" /></span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -394,6 +465,7 @@
               </div>
             </div>
           </div>
+          <button class="btn">loading...</button>
         </div>
         <div class="right-side">
           <div class="sidebar-title">
@@ -499,5 +571,11 @@
         </div>
       </div>
     </section>
+
+    <!-- footer -->
+    <div class="footer">
+      <p>copyright &copy; 2024, E-commerce shopping</p>
+    </div>
+    <script src="./main.js"></script>
   </body>
 </html>
